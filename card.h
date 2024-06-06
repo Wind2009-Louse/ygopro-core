@@ -11,6 +11,7 @@
 #include "common.h"
 #include "effectset.h"
 #include "card_data.h"
+#include "sort.h"
 #include <set>
 #include <map>
 #include <unordered_set>
@@ -269,6 +270,8 @@ public:
 	uint32 get_column_zone(int32 location);
 	void get_column_cards(card_set* cset);
 	int32 is_all_column();
+	uint8 get_select_sequence(uint8 *deck_seq_pointer);
+	uint32 get_select_info_location(uint8 *deck_seq_pointer);
 	int32 is_treated_as_not_on_field();
 
 	void equip(card* target, uint32 send_msg = TRUE);
